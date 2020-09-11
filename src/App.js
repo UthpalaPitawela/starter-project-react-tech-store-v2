@@ -13,5 +13,17 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 //components
 export default function App() {
-  return <h1>hello from app component</h1>;
+  return (
+    <Router>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/cart">
+        <Cart />
+      </Route>
+    </Router>
+  );
 }
